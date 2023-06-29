@@ -1,0 +1,17 @@
+<h1>NEW GAME</h1>
+
+<%# <%= link_to "to score page", "/score", method: :post %>
+
+<ul>
+  <% @selection.each do |letter| %>
+  <li><%= letter %></li>
+  <% end %>
+</ul>
+
+<form action="/score" method="post" data-turbo="false">
+  <label for="guess">What is the longest word you can find?</label>
+  <input type="text" name="guess" id="guess">
+  <input type="submit"> 
+
+</form>
+
